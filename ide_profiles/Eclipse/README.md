@@ -11,14 +11,14 @@ Starting with version 2.6.0 CMake includes a generator for Eclipse CDT 4.0 or ne
 
 You will generate one!  the best way to get an Eclipse IDE project for this project is to generate one using `cmake` and it is really easy.
 
-####1. Create a build directory
+#### 1. Create a build directory
 Create a build directory in your project folder as a sibling to the source directory (`/src`):
 
 ```
 mkdir build
 ```
 
-####2. Change `CMakeLists.txt`
+#### 2. Change `CMakeLists.txt`
 
 1. Be sure to move `CMakeLists.txt` file to the `/src` directory:
 ```
@@ -43,7 +43,7 @@ set(sources
 
 add_executable(ExtendedKF ${sources})
 ```
-####3. CMake 
+#### 3. CMake 
 Go to `build` directory
 ```
 cd build
@@ -53,14 +53,14 @@ and run CMake with the following parameters (see below for commandline). Make su
 ```
 cmake -G"Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug ../src/
 ```
-####4. Make
+#### 4. Make
 Now, make the project:
 ```
 make
 ```
 You will now find two Eclipse project files in your build tree:  `.project` and `.cproject`
 
-####5 Import the project into Eclipse
+#### 5 Import the project into Eclipse
 
 1. Open Eclipse (make sure you have the CDT 4.0 or newer).
 2. Import project using Menu `File > Import`
